@@ -1,21 +1,13 @@
 var express = require("express");
 var router = express.Router();
 var data = require("../fakeData/episodes");
-/* Este controlador no fue generado de forma automática 
-    Se va a encargar de responder las consultas que se hagan a la ruta
-    de los personajes.
-*/
+/* Este controlador no fue generado de forma automática, lo agregamos nosotros.
 
-/*
-  cuidado acá, no va /episodes. Explicar el agregado de rutas implícito
-    que hace express+node
+Intenten de completarlo para trabajar con los capítulos de la serie.
+
 */
 router.get("/", function (req, res, next) {
-  /*
-    Esto rompe porque no podemos responder dos veces.
-*/
-
-  res.json(data);
+  res.send("Este es un endpoint de los episodios");
 });
 
 module.exports = router;
